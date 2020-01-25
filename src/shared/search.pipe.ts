@@ -9,7 +9,7 @@ export class SearchPipe implements PipeTransform {
       return value;
     }
     return value.filter((val) => {
-      let rVal = (val.title.toLocaleLowerCase().includes(args));
+      const rVal = (val.title.toLocaleLowerCase().includes(args));
       return rVal;
     });
 

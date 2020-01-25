@@ -2,19 +2,18 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from 'src/shared/post.service';
 
 @Component({
-  moduleId: module.id,
   selector: 'app-data',
   templateUrl: './app-data.component.html',
   styleUrls: ['./app-data.component.scss'],
 })
 export class AppDataComponent implements OnInit {
-  title = '';
+  @Input() searchQuery: any;
   public posts = [];
-constructor(private _postService: PostService) {
+  constructor(private _postService: PostService) {
 }
 
   ngOnInit() {
-    this._postService.getEmployees()
+    this._postService.getPosts()
       .subscribe(data => this.posts = data);
 
   }

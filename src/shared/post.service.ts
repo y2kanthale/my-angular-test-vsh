@@ -7,12 +7,11 @@ import 'rxjs';
 
 @Injectable()
 export class PostService {
-
   private _url: string = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { }
 
-  getEmployees(): Observable<Post[]> {
+  getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this._url);
   }
   errorHandler(error: HttpErrorResponse) {

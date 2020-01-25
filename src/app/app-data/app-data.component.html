@@ -1,4 +1,3 @@
-<input type="text" [(ngModel)]="title" placeholder="Search Title" class="form-control form-control-lg" id="searchInput" placeholder="search">
 
 <table width="100%" class="table border">
   <tr>
@@ -7,7 +6,7 @@
     <th>Title</th>
     <th>Body</th>
   </tr>
-  <tr *ngFor="let post of posts | titleFilter:title;">
+  <tr *ngFor="let post of posts | titleFilter:searchQuery;">
     <th scope="row">{{post.userId}}</th>
     <td>{{post.id}}</td>
     <td>{{post.title}}</td>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-test-vsh';
+  inputVal: any;
+  onSearchText(textVal: any) {
+    this.inputVal = textVal;
+  }
 }
