@@ -15,7 +15,9 @@ export class AppDataComponent implements OnInit {
   ngOnInit() {
     this._postService.getPosts()
       .subscribe(data => this.posts = data);
-
+  }
+  deletePost(postId: any) {
+    this.posts = this.posts.filter(pos => pos.id !== postId);
   }
 
 }
